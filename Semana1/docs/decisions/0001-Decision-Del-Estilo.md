@@ -1,12 +1,12 @@
 # Decisión-del-estilo
 
-* Status: proposed
+* Status: accepted
 * Deciders: Jesus, Iciar
 * Date: 2024-11-02
 
 ## Context and Problem Statement
 
-En el contexto de nuestro proyecto de desarrollo software, hemos decidido adoptar un estilo REST para permitir la comunicación de los clientes con los servicios de la aplicación, y para emjorar la escalabilidad de nuestro sistema.
+En el contexto de nuestro proyecto de desarrollo software, hemos decidido adoptar un estilo REST para permitir la comunicación de los clientes con los servicios de la aplicación, y para mejorar la escalabilidad de nuestro sistema.
 
 ## Decision Drivers
 
@@ -18,7 +18,9 @@ En el contexto de nuestro proyecto de desarrollo software, hemos decidido adopta
 ## Considered Options
 
 * 0001 Estilo Cliente - Servidor
-* 0001-2 Estilo REST
+* 0001-2-Estilo-REST
+* 0001-3-Event-Drivent-Architecture
+* 0001-4-Estilo-Maestro-Esclavo
 
 ## Decision Outcome
 
@@ -52,7 +54,7 @@ contextuales entre peticiones.
 * Bad, because La caída del servidor afecta a todos los clientes.
 * Bad, because Puede haber retrasos en las interacciones debido a la latencia entre el cliente y el servidor.
 
-### 0001-2 Estilo REST
+### 0001-2-Estilo-REST
 
 El estilo REST es un modelo de arquitectura para aplicaciones web que se basa en el intercambio de recursos a través de peticiones HTTP simples y sin estado. En REST, los clientes solicitan recursos específicos mediante verbos como GET, POST, PUT y DELETE, y los servidores responden con datos en un formato estándar, como JSON o XML.
 
@@ -70,9 +72,32 @@ El estilo REST es un modelo de arquitectura para aplicaciones web que se basa en
 * Bad, because Más posibles puntos de error
 * Bad, because Mayor dificultad en el gobierno de los servicios
 
+### 0001-3-Event-Drivent-Architecture
+
+Event-Driven Architecture es un estilo arquitectónico en el que los sistemas reaccionan a eventos generados en tiempo real o en momentos específicos. En EDA, los componentes no están directamente conectados entre sí; en cambio, se comunican de manera indirecta a través de eventos
+
+* Good, because EDA es altamente escalable, ya que permite manejar múltiples eventos de manera simultánea.
+* Good, because En EDA, los componentes están fuertemente desacoplados, lo que facilita cambios en una parte del sistema sin afectar a otras.
+* Good, because Al procesar eventos solo cuando se generan y permitir una arquitectura asíncrona, EDA puede reducir el tiempo de espera en el procesamiento de tareas
+* Good, because EDA permite que las aplicaciones respondan en tiempo real a los cambios
+* Bad, because EDA puede ser complicado de desarrollar y mantener
+* Bad, because Al tener flujos de datos asíncronos y basados en eventos, resulta difícil rastrear errores o comportamientos inesperados.
+
+### 0001-4-Estilo-Maestro-Esclavo
+
+Maestro-Esclavo es un estilo arquitectónico en el que un sistema se organiza en una jerarquía de componentes donde uno actúa como Maestro y controla, supervisa y coordina las acciones de uno o más Esclavos. En este modelo, el Maestro toma las decisiones principales y delega las tareas a los Esclavos, que ejecutan instrucciones específicas y reportan resultados al Maestro.
+
+* Good, because La centralización del control en el Maestro facilita la supervisión y la coordinación de tareas
+* Good, because Los Esclavos pueden ser escalados según la demanda
+* Good, because La distribución de tareas entre varios Esclavos permite el procesamiento simultáneo, lo cual reduce el tiempo total de ejecución de tareas intensivas.
+* Bad, because Si el Maestro falla, todo el sistema puede quedar inoperativo
+* Bad, because Si el número de Esclavos aumenta considerablemente, el Maestro puede convertirse en un cuello de botella
+
 ## Links
 
 * https://aws.amazon.com/es/what-is/restful-api/
 * https://reactiveprogramming.io/blog/es/estilos-arquitectonicos/rest
 * https://www.redhat.com/es/topics/api/what-is-a-rest-api
 * https://es.wikipedia.org/wiki/Cliente-servidor
+* https://www.ionos.es/digitalguide/servidores/know-how/principio-master/slave/
+* https://aws.amazon.com/es/what-is/eda/
