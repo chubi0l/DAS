@@ -6,7 +6,7 @@
 
 ## Context and Problem Statement
 
-En el contexto de nuestro proyecto de desarrollo software, hemos decidido adoptar un estilo por capas para permitir la creación de capas independientes que cumplan una función específica de la lógica de negocio.
+En el contexto de nuestro proyecto de desarrollo software, hemos decidido adoptar un estilo por capas para permitir la creación de capas independientes: el sistema debe dividirse en una capa de presentación, lógica de negocio y capa de datos..
 
 ## Decision Drivers
 
