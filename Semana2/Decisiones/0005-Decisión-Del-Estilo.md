@@ -12,7 +12,6 @@ En nuestro proyecto de desarrollo de software, hemos decidido usar una arquitect
 
 * RF-01 Arquitectura basada en microservicios
 * RF-02 Arquitectura HTTP/REST
-* RD-05 Acceso desde dispositivos Móviles y PC
 
 ## Considered Options
 
