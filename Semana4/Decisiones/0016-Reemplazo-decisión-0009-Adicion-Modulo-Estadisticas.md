@@ -33,7 +33,7 @@ Chosen option: "0016-1-Clase estadística única", because centralizar toda la l
 
 ## Pros and Cons of the Options
 
-### Clase estadística única
+### 0016-1-Clase estadística única
 
 En este enfoque, se tiene una única clase Estadística que contiene métodos para manejar los 3 tipos de estadísticas. Esta clase sería responsable de determinar cuál de las estadísticas debe usarse y ejecutar la lógica correspondiente.
 
@@ -42,7 +42,7 @@ En este enfoque, se tiene una única clase Estadística que contiene métodos pa
 * Bad, because Escalabilidad limitada, ya que si queremos añadir más tipos de estadísticas o cambios relacionados con estas va a ser más dificil de manejar si está toda la lógica en una única clase
 * Bad, because A medida que se agregan más tipos de estadísticas, la clase puede volverse más compleja y difícil de gestionar
 
-### Clase estadística que seleccione el tipo de estadística con el método strategy
+### 0016-2-Clase estadística que seleccione el tipo de estadística con el método strategy
 
 En este enfoque, se tiene una clase Estadística que actúa como contexto y una interfaz para los diferentes tipos de estadísticas. Cada tipo de estadística se implementa en su propia clase que sigue la interfaz de Estadística. La clase Estadística puede cambiar dinámicamente la estrategia para usar el tipo de estadística adecuado. En este enfoque creamos 3 clases que hereden de la interfaz strategy con un método llamado "seleccionarEstadistica()" y cada clase hija tendrá un método para consultar sus estadisticas. La clase base llamada "Estadística" tendrá un método llamado consultarEstadistica() y un método para seleccionar el tipo de estadística. Además de contener una propiedad de tipo Strategy
 

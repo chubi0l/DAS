@@ -34,7 +34,7 @@ Chosen option: "0017-2-Patrón Circuit Breaker", because este patrón proporcion
 
 ## Pros and Cons of the Options
 
-### Patrón Retry
+### 0017-1-Patrón Retry
 
 El patrón Retry es una estrategia en arquitectura de microservicios que permite a un sistema reintentar la ejecución de una operación que falló temporalmente debido a errores transitorios o intermitentes, como fallos en la red o congestión del sistema. 
 
@@ -53,7 +53,7 @@ El bloqueo temporal puede integrarse con un mecanismo de caché o una base de da
 * Bad, because Incremento en el Uso de Recursos: Los reintentos pueden sobrecargar el sistema o las bases de datos si el volumen de órdenes es alto
 * Bad, because Complejidad en la Implementación y Mantenimiento: La implementación del patrón Retry agrega complejidad al código
 
-### Patrón Circuit Breaker
+### 0017-2-Patrón Circuit Breaker
 
 El patrón Circuit Breaker actúa como un interruptor automático que monitorea la salud de un servicio. Si el servicio falla repetidamente, el Circuit Breaker se "abre" e impide que se envíen más solicitudes al servicio fallido, evitando así una sobrecarga del sistema y permitiendo que se recupere. Después de un tiempo, el Circuit Breaker pasa a un estado "semiabierto" para probar si el servicio se ha recuperado.
 
