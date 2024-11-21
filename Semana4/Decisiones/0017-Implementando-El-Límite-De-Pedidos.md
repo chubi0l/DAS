@@ -51,7 +51,7 @@ El bloqueo temporal puede integrarse con un mecanismo de caché o una base de da
 * Good, because Manejo Controlado de Errores: Reduce la cantidad de errores presentados al usuario final, ya que reintenta automáticamente en caso de fallos.
 * Good, because Alineación con una Arquitectura Distribuida: Al implementar Retry, el sistema puede seguir funcionando de manera independiente y modular, alineándose con el principio de autonomía de microservicios.
 * Bad, because Incremento en el Uso de Recursos: Los reintentos pueden sobrecargar el sistema o las bases de datos si el volumen de órdenes es alto
-* Bad, because Complejidad en la Implementación y Mantenimiento: La implementación del patrón Retry agrega complejidad al código
+* Bad, because Complejidad en la Implementación y Mantenimiento: La implementación del patrón Retry agrega complejidad al código 
 
 ### 0017-2-Patrón Circuit Breaker
 

@@ -29,7 +29,7 @@ Chosen option: "0016-1-Clase estadística única", because centralizar toda la l
 ### Negative Consequences
 
 * Una clase única podría volverse compleja y difícil de mantener si se requieren cambios en ella
-* La capacidad de adaptarse a cambios futuros o integrar nuevas funcionalidades se ve limitada
+* La capacidad de adaptarse a cambios futuros o integrar nuevas funcionalidades se ve limitada 
 
 ## Pros and Cons of the Options
 
