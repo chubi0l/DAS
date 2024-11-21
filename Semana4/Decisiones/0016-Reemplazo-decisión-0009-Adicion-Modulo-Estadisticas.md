@@ -1,4 +1,4 @@
-# Reemplazo-decisión-0009-Adicion-Modulo-Estadisticas
+# reemplazo-decisión-0009-Adicion-Modulo-Estadisticas
 
 * Status: accepted
 * Deciders: Jesus, Iciar
