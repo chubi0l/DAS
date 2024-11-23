@@ -11,7 +11,7 @@ Se necesita que el sistema alerte sobre las incidencias que ocurran durante la g
 ## Decision Drivers
 
 * RF-08 Gestión de Incidencias
-* Rf-10 Notificación de incidencias
+* RF-10 Notificación de incidencias
 
 ## Considered Options
 
